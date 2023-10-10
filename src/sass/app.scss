@@ -16,17 +16,31 @@ body {
   background: url(../img/containers.jpg) center no-repeat;
   background-size: cover;
   color: #fff;
+  @media (min-width: 980px) {
+    padding-bottom: 7px;
+  }
   &__wrap{
     padding-top: 45.52px;
     border-bottom: 1px solid #fff;
     @media (min-width: 768px) {
       padding-top: 110px;
     }
+    @media (min-width: 980px) {
+      padding-top: 57px;
+      padding-bottom: 22px;
+    }
   }
   &__logo {
     margin-bottom: 10px;
     @media (min-width: 768px) {
       display: none;
+    }
+    &_dark{
+      display: none;
+      @media (min-width: 980px) {
+        display: block;
+        background: #ffffff;
+      }
     }
   }
   &__lang {
@@ -36,8 +50,53 @@ body {
     }
   }
 }
-.logo {
+
+.case-map{
+  width: 100%;
+  &__wrap{
+    border: 1px solid #FFF;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+  }
+  &__item{
+    border-right: 1px solid #FFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 31px;
+    &:last-child{
+      border-right: none;
+    }
+    &_active{
+      background: #141414;;
+    }
+  }
+  &__icon{
+    padding: 7px;
+    font-size: 10px;
+    font-weight: 300;
+    line-height: 120%;
+    width: 35px;
+    border: 1px solid #FFF;
+    margin-bottom: 20px;
+  }
+  &__name{
+    margin-bottom: 32px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 140%; /* 19.6px */
+    padding: 0 11px;
+  }
 }
+
+.logo {
+  @media (min-width: 980px) {
+    background: #ffffff;
+  }
+}
+
 .lang {
   font-size: 14px;
   display: flex;
@@ -117,12 +176,31 @@ body {
 
 .my-container {
   margin: 0 40px 0;
+  @media (min-width: 1180px) {
+    margin: 0 auto;
+    max-width: 1140px;
+  }
 }
 
 .closer{
   &__wrap {
     margin-bottom: 75px;
     padding-top: 60.53px;
+    @media (min-width: 980px) {
+      margin-bottom: 100px;
+      display: grid;
+      grid-template-columns: 50% 50%;
+    }
+  }
+  &__mini-title{
+    @media (min-width: 980px) {
+      grid-column-start: span 2;
+    }
+  }
+  &__text{
+    @media (min-width: 980px) {
+      grid-row-start: span 2;
+    }
   }
 }
 
