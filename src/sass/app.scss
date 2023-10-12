@@ -223,6 +223,10 @@ body {
     font-size: 32px;
     width: 550px;
   }
+  @media (min-width: 980px) {
+    font-size: 32px;
+    width: 100%;
+  }
 }
 
 .text {
@@ -250,9 +254,21 @@ body {
 .confidence {
   &__wrap{
     margin-bottom: 40px;
+    @media (min-width: 980px) {
+      display: grid;
+      margin-bottom: 100px;
+      column-gap: 10%;
+      row-gap: 10px;
+      grid-template-columns: 40% 50%;
+    }
   }
   &__text {
-
+    &_first{
+      @media (min-width: 980px) {
+        grid-column: 2/3;
+        grid-row: 1/2;
+      }
+    }
   }
   &__button{
 
@@ -265,9 +281,34 @@ body {
   &__wrap {
     padding-top: 38px;
     padding-bottom: 50px;
+    @media (min-width: 980px) {
+      padding-top: 100px;
+      padding-bottom: 99px;
+    }
   }
   &__link{
     margin-bottom: 47px;
+  }
+  &__title{
+    @media (min-width: 980px) {
+      width: 600px;
+    }
+  }
+  &__desc{
+    @media (min-width: 980px) {
+      display: grid;
+      grid-template-columns: 35% 50%;
+      column-gap: 15%;
+      margin-bottom: 44px;
+    }
+  }
+  &__text{
+    &_gap{
+      @media (min-width: 980px) {
+        grid-column: 2/3;
+        grid-row: 1/3;
+      }
+    }
   }
 }
 
@@ -313,6 +354,9 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 18px;
+    @media (min-width: 980px) {
+      column-gap: 38px;
+    }
   }
   &__item {
     border-bottom: $border-color 1px solid;
@@ -337,11 +381,29 @@ body {
   background: $light-dark;
   &__wrap{
     padding-bottom: 40px;
+    @media (min-width: 980px) {
+      padding-bottom:99px;
+    }
+  }
+  &__header{
+    @media (min-width: 980px) {
+      display: grid;
+      grid-template-columns: 35% 50%;
+      column-gap: 15%;
+      margin-bottom: 22px;
+    }
   }
   &__text{
     margin-bottom: 45px;
     &_red{
       font-weight: 500;
+    }
+  }
+  &__items{
+    @media (min-width: 980px) {
+      display: grid;
+      column-gap: 5%;
+      grid-template-columns: 30% 30% 30%;
     }
   }
   &__item{
@@ -371,9 +433,23 @@ body {
   &__wrap {
     padding-top: 38px;
     padding-bottom: 40px;
+    @media (min-width: 980px) {
+      padding-top: 100px;
+      padding-bottom: 133px;
+    }
   }
   &__desc {
     margin-bottom: 58px;
+    @media (min-width: 980px) {
+      display: grid;
+      column-gap: 15%;
+      grid-template-columns: 35% 50%;
+    }
+  }
+  &__text{
+    &_grid{
+      grid-row: span 2;
+    }
   }
   &__countries {
     margin-bottom: 35px;
@@ -381,6 +457,14 @@ body {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 27px;
+    }
+    @media (min-width: 980px) {
+      gap: 40px;
+    }
+  }
+  &__title{
+    @media (min-width: 980px) {
+      width: 530px;
     }
   }
 }
