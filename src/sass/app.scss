@@ -429,7 +429,10 @@ body {
 .medium-title{
   font-size: 18px;
   font-weight: 600;
-  line-height: 21.6px;
+  line-height: 120%;
+  @media (min-width: 980px) {
+    font-size: 24px;
+  }
 }
 
 .direction {
@@ -690,8 +693,17 @@ body {
 
 .task{
   margin-bottom: 35px;
+  @media (min-width: 980px) {
+    display: grid;
+    grid-template-columns: 45% 50%;
+    column-gap: 5%;
+    row-gap: 10px;
+  }
   &__img{
     margin-bottom: 25px;
+    @media (min-width: 980px) {
+      grid-row: 2/5;
+    }
     img{
       width: 100%;
       height: 100%;
@@ -711,12 +723,19 @@ body {
     text-transform: uppercase;
     margin-bottom: 10px;
   }
+  &__grid-list{
+    grid-row: 1/3;
+  }
 }
 
 .clients{
   &__wrap{
     padding-top: 38px;
     margin-bottom: 75px;
+    @media (min-width: 980px) {
+      padding-top: 100px;
+      margin-bottom: 100px;
+    }
   }
   &__board{
     display: grid;
@@ -732,6 +751,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    @media (min-width: 980px) {
+      height: 150px;
+    }
   }
 }
 
@@ -793,6 +815,9 @@ body {
     @media (min-width: 768px) {
       padding-bottom: 50px;
     }
+    @media (min-width: 980px) {
+      padding-bottom: 100px;
+    }
   }
   &__button{
     margin-top: 35px;
@@ -801,12 +826,19 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
+    @media (min-width: 980px) {
+      gap: 40px;
+    }
   }
 }
 
 .news{
   &__title{
     width: 285px;
+    @media (min-width: 980px) {
+      width: 100%;
+      margin-bottom: 35px;
+    }
   }
   &__item{
     border-top: 1px solid $border-color;
@@ -841,6 +873,15 @@ body {
   &__wrap{
     padding-top: 38px;
     padding-bottom: 40px;
+    @media (min-width: 980px) {
+      padding-top: 100px;
+      padding-bottom: 100px;
+    }
+  }
+  &__title{
+    @media (min-width: 980px) {
+      width: 640px;
+    }
   }
   &__text{
     font-size: 14px;
@@ -943,6 +984,9 @@ body {
     font-size: 12px;
     font-weight: 600;
     line-height: 16.2px;
+    @media (min-width: 980px) {
+      display: none;
+    }
   }
 }
 
