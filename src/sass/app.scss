@@ -52,7 +52,11 @@ body {
 }
 
 .case-map{
-  width: 100%;
+  display: none;
+  @media (min-width: 980px) {
+    display: block;
+    width: 100%;
+  }
   &__wrap{
     border: 1px solid #FFF;
     display: grid;
@@ -823,9 +827,12 @@ body {
     margin-top: 35px;
   }
   &__news{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 30px;
+
+    @media (min-width: 768px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+    }
     @media (min-width: 980px) {
       gap: 40px;
     }
@@ -919,7 +926,7 @@ body {
   &__certif{
     display: flex;
     align-items: center;
-    gap: 30px;
+    justify-content: space-between;
     margin-bottom: 58px;
     @media (min-width: 768px) {
       padding-top: 55px;
