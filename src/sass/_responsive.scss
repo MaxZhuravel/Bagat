@@ -1,8 +1,10 @@
 /**
   Десктоп маленький
  */
-@media screen and (max-width: 1429px) {
-
+@media (min-width: 980px) {
+  .header {
+    padding-bottom: 7px;
+  }
 }
 
 /**

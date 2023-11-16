@@ -6,9 +6,16 @@ body {
   font-family: $font-main;
   color: $dark;
 }
+
 .wrapper {
   margin: 0 auto;
+}
 
+button {
+  background-color: transparent;
+}
+
+a[href^="tel:"] {
 }
 
 .header {
@@ -19,7 +26,7 @@ body {
   @media (min-width: 980px) {
     padding-bottom: 7px;
   }
-  &__wrap{
+  &__wrap {
     padding-top: 45.52px;
     border-bottom: 1px solid #fff;
     @media (min-width: 768px) {
@@ -32,10 +39,12 @@ body {
   }
   &__logo {
     margin-bottom: 10px;
+    width: 100px;
+    height: 30px;
     @media (min-width: 768px) {
       display: none;
     }
-    &_dark{
+    &_dark {
       display: none;
       @media (min-width: 980px) {
         display: block;
@@ -51,32 +60,32 @@ body {
   }
 }
 
-.case-map{
+.case-map {
   display: none;
   @media (min-width: 980px) {
     display: block;
     width: 100%;
   }
-  &__wrap{
+  &__wrap {
     border: 1px solid #FFF;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
   }
-  &__item{
+  &__item {
     border-right: 1px solid #FFF;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding-top: 31px;
-    &:last-child{
+    &:last-child {
       border-right: none;
     }
-    &_active{
-      background: #141414;;
+    &:hover {
+      background: #141414;
     }
   }
-  &__icon{
+  &__icon {
     padding: 7px;
     font-size: 10px;
     font-weight: 300;
@@ -85,7 +94,7 @@ body {
     border: 1px solid #FFF;
     margin-bottom: 20px;
   }
-  &__name{
+  &__name {
     margin-bottom: 32px;
     text-align: center;
     font-size: 14px;
@@ -115,10 +124,10 @@ body {
     }
   }
 }
-.intro{
+.intro {
   padding-top: 31px;
   margin-bottom: 35px;
-  &__wrap{
+  &__wrap {
     margin-bottom: 35.08px;
   }
   &__title {
@@ -143,7 +152,7 @@ body {
     @media (min-width: 768px) {
       width: 500px;
     }
-    &:last-child{
+    &:last-child {
       margin-bottom: 0;
     }
   }
@@ -160,19 +169,20 @@ body {
   font-size: 14px;
   font-weight: 700;
   line-height: 16.8px;
+  width: 100%;
   @media (min-width: 768px) {
     width: 320px;
     font-size: 16px;
   }
-  &_red{
+  &_red {
     background-color: $red;
     color: #fff;
   }
-  &_white{
+  &_white {
     border: 2px solid #FFF;
     color: #fff;
   }
-  &_dark{
+  &_dark {
     border: 2px solid $dark;
     color: $dark;
   }
@@ -186,7 +196,7 @@ body {
   }
 }
 
-.closer{
+.closer {
   &__wrap {
     margin-bottom: 75px;
     padding-top: 60.53px;
@@ -196,19 +206,19 @@ body {
       grid-template-columns: 50% 50%;
     }
   }
-  &__mini-title{
+  &__mini-title {
     @media (min-width: 980px) {
       grid-column-start: span 2;
     }
   }
-  &__text{
+  &__text {
     @media (min-width: 980px) {
       grid-row-start: span 2;
     }
   }
 }
 
-.mini-title{
+.mini-title {
   color: $red;
   font-size: 12px;
   line-height: 120%;
@@ -239,7 +249,7 @@ body {
 .text {
   font-weight: 400;
 
-  &_red{
+  &_red {
     color: $red;
   }
   &_strong {
@@ -259,7 +269,7 @@ body {
 }
 
 .confidence {
-  &__wrap{
+  &__wrap {
     margin-bottom: 40px;
     @media (min-width: 980px) {
       display: grid;
@@ -270,16 +280,12 @@ body {
     }
   }
   &__text {
-    &_first{
+    &_first {
       @media (min-width: 980px) {
         grid-column: 2/3;
         grid-row: 1/2;
       }
     }
-  }
-  &__button{
-
-
   }
 }
 
@@ -293,15 +299,15 @@ body {
       padding-bottom: 99px;
     }
   }
-  &__link{
+  &__link {
     margin-bottom: 47px;
   }
-  &__title{
+  &__title {
     @media (min-width: 980px) {
       width: 600px;
     }
   }
-  &__desc{
+  &__desc {
     @media (min-width: 980px) {
       display: grid;
       grid-template-columns: 35% 50%;
@@ -309,8 +315,8 @@ body {
       margin-bottom: 44px;
     }
   }
-  &__text{
-    &_gap{
+  &__text {
+    &_gap {
       @media (min-width: 980px) {
         grid-column: 2/3;
         grid-row: 1/3;
@@ -328,10 +334,10 @@ body {
   @media (min-width: 768px) {
     font-size: 16px;
   }
-  &__play{
+  &__play {
     padding-left: 30px;
     position: relative;
-    &:before{
+    &:before {
       content: "";
       display: block;
       position: absolute;
@@ -341,10 +347,10 @@ body {
       top:-2px;
     }
   }
-  &__report{
+  &__report {
     padding-left: 30px;
     position: relative;
-    &:before{
+    &:before {
       content: "";
       display: block;
       position: absolute;
@@ -386,13 +392,13 @@ body {
 
 .service {
   background: $light-dark;
-  &__wrap{
+  &__wrap {
     padding-bottom: 40px;
     @media (min-width: 980px) {
       padding-bottom:99px;
     }
   }
-  &__header{
+  &__header {
     @media (min-width: 980px) {
       display: grid;
       grid-template-columns: 35% 50%;
@@ -400,26 +406,26 @@ body {
       margin-bottom: 22px;
     }
   }
-  &__text{
+  &__text {
     margin-bottom: 45px;
-    &_red{
+    &_red {
       font-weight: 500;
     }
   }
-  &__items{
+  &__items {
     @media (min-width: 980px) {
       display: grid;
       column-gap: 5%;
       grid-template-columns: 30% 30% 30%;
     }
   }
-  &__item{
+  &__item {
     margin-bottom: 25px;
-    &:last-child{
+    &:last-child {
       margin-bottom: 35px;
     }
   }
-  &__number{
+  &__number {
     color: $red;
     font-size: 32px;
     line-height: 38.4px;
@@ -430,7 +436,7 @@ body {
   }
 }
 
-.medium-title{
+.medium-title {
   font-size: 18px;
   font-weight: 600;
   line-height: 120%;
@@ -456,8 +462,8 @@ body {
       grid-template-columns: 35% 50%;
     }
   }
-  &__text{
-    &_grid{
+  &__text {
+    &_grid {
       grid-row: span 2;
     }
   }
@@ -472,7 +478,7 @@ body {
       gap: 40px;
     }
   }
-  &__title{
+  &__title {
     @media (min-width: 980px) {
       width: 530px;
     }
@@ -485,19 +491,19 @@ body {
   padding-left: 40px;
   padding-bottom: 30px;
   margin-bottom: 15px;
-  @media(min-width: 768px){
+  @media(min-width: 768px) {
     padding-left: 35px;
   }
-  &__flag{
+  &__flag {
     margin-bottom: 14px;
   }
-  &__title{
+  &__title {
     margin-bottom: 25px;
   }
-  &__link{
-    a{
+  &__link {
+    a {
       position: relative;
-      &:after{
+      &:after {
         content: "";
         display: inline-block;
         position: relative;
@@ -511,12 +517,12 @@ body {
   }
 }
 
-.advantage{
+.advantage {
   background: $light-dark;
-  &__wrap{
+  &__wrap {
     padding-top: 38px;
   }
-  &__grid{
+  &__grid {
     @media (min-width: 980px) {
       display: grid;
       grid-template-columns: 35% 50%;
@@ -525,18 +531,18 @@ body {
       margin-bottom: 24px;
     }
   }
-  &__mini-title{
+  &__mini-title {
     @media (min-width: 980px) {
       margin-bottom: 35px;
     }
   }
-  &__links{
+  &__links {
     margin-bottom: 46px;
   }
-  &__link{
+  &__link {
     margin-bottom: 18px;
   }
-  &__stat{
+  &__stat {
     padding-bottom: 75px;
     @media (min-width: 768px) {
       display: grid;
@@ -549,23 +555,22 @@ body {
       padding-bottom: 100px;
     }
   }
-  &__stat-desc{
+  &__stat-desc {
     font-size: 16px;
     font-weight: 500;
     line-height: 19.2px;
     margin-bottom: 15px;
   }
-  &__text{
+  &__text {
     @media (min-width: 980px) {
       grid-row: span 2;
     }
   }
 }
 
-
-.condition{
+.condition {
   background: $light-dark;
-  &__wrap{
+  &__wrap {
     padding-bottom: 40px;
     @media (min-width: 768px) {
       margin-bottom: 25px;
@@ -574,12 +579,12 @@ body {
       padding-bottom: 134px;
     }
   }
-  &__title{
+  &__title {
     @media (min-width: 980px) {
       margin-bottom: 75px;
     }
   }
-  &__body{
+  &__body {
     @media (min-width: 768px) {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -589,36 +594,42 @@ body {
       gap: 5%;
     }
   }
-  &__item{
+  &__item {
     margin-bottom: 25px;
   }
-  &__logo{
+  &__logo {
     margin-bottom: 10px;
+    width: 40px;
+    height: 40px;
+    @media (min-width: 768px) {
+      width: 50px;
+      height: 50px;
+    }
   }
-  &__desc{
+  &__desc {
     font-size: 16px;
     font-weight: 500;
     line-height: 21.6px;
   }
 }
 
-.license{
-  &__wrap{
+.license {
+  &__wrap {
     padding-top: 38px;
   }
-  &__title{
+  &__title {
     margin-bottom: 57px;
   }
 }
 
-.slider{
+.slider {
   margin-bottom: 75px;
   @media (min-width: 768px) {
     display: none;
   }
 }
 
-.gallery{
+.gallery {
   display: none;
   @media (min-width: 768px) {
     margin-bottom: 75px;
@@ -630,8 +641,8 @@ body {
     gap: 38px;
     margin-bottom: 100px;
   }
-  &__item{
-    img{
+  &__item {
+    img {
       width: 100%;
       height: 45vw;
       object-fit: cover;
@@ -642,8 +653,8 @@ body {
   }
 }
 
-.attention{
-  &__desc{
+.attention {
+  &__desc {
     margin-bottom: 40px;
     @media (min-width: 980px) {
       display: grid;
@@ -663,13 +674,13 @@ body {
       padding-top: 100px;
     }
   }
-  &__title-m{
+  &__title-m {
     margin-bottom: 25px;
   }
-  &__points{
+  &__points {
     margin-bottom: 25px;
   }
-  &__items{
+  &__items {
     @media (min-width: 768px) {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -678,24 +689,32 @@ body {
       grid-template-columns: 21% 21%;
     }
   }
-  &__item{
+  &__item {
     display: flex;
     align-items: center;
     gap: 15px;
     margin-bottom: 17px;
   }
-  &__desc{
+  &__desc {
     font-size: 14px;
     font-weight: 500;
     line-height: 16.8px;
     margin-bottom: 0;
   }
-  &__button{
+  &__button {
     margin-bottom: 10px;
+  }
+  &__icon {
+    height: 35px;
+    width: 35px;
+    @media (min-width: 768px) {
+      height: 40px;
+      width: 40px;
+    }
   }
 }
 
-.task{
+.task {
   margin-bottom: 35px;
   @media (min-width: 980px) {
     display: grid;
@@ -703,23 +722,23 @@ body {
     column-gap: 5%;
     row-gap: 10px;
   }
-  &__img{
+  &__img {
     margin-bottom: 25px;
     @media (min-width: 980px) {
       grid-row: 2/5;
     }
-    img{
+    img {
       width: 100%;
       height: 100%;
       object-fit: contain;
     }
   }
-  &__list{
+  &__list {
     list-style: decimal;
     padding-left: 16px;
     margin-bottom: 19px;
   }
-  &__title{
+  &__title {
     font-weight: 500;
     color: $red;
     font-size: 12px;
@@ -727,13 +746,13 @@ body {
     text-transform: uppercase;
     margin-bottom: 10px;
   }
-  &__grid-list{
+  &__grid-list {
     grid-row: 1/3;
   }
 }
 
-.clients{
-  &__wrap{
+.clients {
+  &__wrap {
     padding-top: 38px;
     margin-bottom: 75px;
     @media (min-width: 980px) {
@@ -741,7 +760,7 @@ body {
       margin-bottom: 100px;
     }
   }
-  &__board{
+  &__board {
     display: grid;
     gap: 20px;
     grid-template-columns: 1fr 1fr;
@@ -749,7 +768,7 @@ body {
       grid-template-columns: repeat(4, 1fr);
     }
   }
-  &__item{
+  &__item {
     height: 88px;
     background: $light-dark;
     display: flex;
@@ -759,32 +778,37 @@ body {
       height: 150px;
     }
   }
+  &__logo {
+    width: 100%;
+    height: 100%;
+    padding: 25px;
+  }
 }
 
-.faq{
-  &__wrap{
+.faq {
+  &__wrap {
     margin-bottom: 75px;
   }
-  &__title{
+  &__title {
     padding-bottom: 25px;
     border-bottom: 1px solid $border-color;
   }
 }
 
-.accordion{
+.accordion {
   &-header {
     background-color: white;
     color: $dark
   }
-  &-body{
+  &-body {
     padding-left: 0;
     padding-top: 10px;
   }
-  &-item{
+  &-item {
     border: none;
     border-bottom: 1px solid $border-color;
   }
-  &-button{
+  &-button {
     color: $dark;
     padding-left: 0;
     padding-top: 25px;
@@ -793,18 +817,20 @@ body {
       font-size: 24px;
       font-weight: 600;
     }
-    &:after{
+    &:after {
       background: url("../img/plus.png");
     }
-    &:not(.collapsed){
+    &:not(.collapsed) {
       background: white;
       color: $dark;
       border: 0;
-      &:after{
+      &:after {
         background: url("../img/close-icone.png") no-repeat center;
+        width: 25px;
+        height: 25px;
       }
     }
-    &:focus{
+    &:focus {
       border: 0;
       box-shadow: none;
       background-color: white;
@@ -813,8 +839,8 @@ body {
   }
 }
 
-.blog{
-  &__wrap{
+.blog {
+  &__wrap {
     padding-bottom: 75px;
     @media (min-width: 768px) {
       padding-bottom: 50px;
@@ -823,11 +849,10 @@ body {
       padding-bottom: 100px;
     }
   }
-  &__button{
+  &__button {
     margin-top: 35px;
   }
-  &__news{
-
+  &__news {
     @media (min-width: 768px) {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -839,45 +864,48 @@ body {
   }
 }
 
-.news{
-  &__title{
+.news {
+  &__title {
     width: 285px;
+    color: $dark;
     @media (min-width: 980px) {
       width: 100%;
       margin-bottom: 35px;
     }
   }
-  &__item{
+  &__item {
+    display: block;
     border-top: 1px solid $border-color;
     padding-top: 15px;
     margin-bottom: 25.45px;
+    text-decoration: none;
   }
-  &__sub{
+  &__sub {
     margin-bottom: 15px;
     display: flex;
     justify-content: space-between;
   }
-  &__date{
+  &__date {
     color: $border-color;
     font-size: 12px;
     font-weight: 500;
     line-height: 14.4px;
   }
-  &__arrow{
+  &__arrow {
     width: 18px;
     height: 18px;
-    background: url("../img/arrow.png");
+    //background: url("../img/arrow.png");
   }
-  &__img{
-    img{
+  &__img {
+    img {
       width: 100%;
     }
   }
 }
 
-.offer{
+.offer {
   background: $light-dark;
-  &__wrap{
+  &__wrap {
     padding-top: 38px;
     padding-bottom: 40px;
     @media (min-width: 980px) {
@@ -885,45 +913,47 @@ body {
       padding-bottom: 100px;
     }
   }
-  &__title{
+  &__title {
     @media (min-width: 980px) {
       width: 640px;
     }
   }
-  &__text{
+  &__text {
     font-size: 14px;
     line-height: 21.6px;
     margin-bottom: 34px;
   }
 }
 
-.footer{
+.footer {
   background: $dark;
   color: #fff;
 
-  &__head{
+  &__head {
     @media (min-width: 768px) {
       display: grid;
       grid-template-columns: 1fr 1fr;
     }
   }
-  &__wrap{
+  &__wrap {
     padding-bottom: 50px;
     padding-top: 40px;
     @media (min-width: 768px) {
       padding-bottom: 30px;
     }
   }
-  &__logo{
+  &__logo {
     margin-bottom: 10px;
+    width: 120px;
+    height: 29px;
   }
-  &__about{
+  &__about {
     width: 135px;
     font-size: 10px;
     line-height: 13.5px;
     margin-bottom: 16px;
   }
-  &__certif{
+  &__certif {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -932,62 +962,69 @@ body {
       padding-top: 55px;
     }
   }
-  &__main{
+  &__main {
     @media (min-width: 768px) {
       display: grid;
       grid-template-columns: 1fr 1fr;
       margin-bottom: 45px;
     }
   }
-  &__medium-title{
+  &__medium-title {
     font-size: 16px;
     font-weight: 600;
     line-height: 19.2px;
     margin-bottom: 15px;
   }
-  &__service-item{
+  &__service-item {
     padding-left: 0;
-    li{
+    li {
       font-size: 12px;
       font-weight: 400;
       line-height: 15.6px;
     }
   }
-  &__address{
+  &__address {
     display: flex;
     font-size: 12px;
     line-height: 15.6px;
     gap: 38px;
     margin-bottom: 25px;
   }
-  &__tel{
-    text-decoration: underline;
+  &__tel {
+    color: #FFFFFF;
+    display: block;
+    margin-bottom: 10px;
   }
-  &__email{
-    text-decoration: underline;
+  &__email {
+    color: #FFFFFF;
+    display: block;
+    margin-bottom: 10px;
   }
-  span{
+  span {
     font-weight: 500;
   }
-  &__street{
+  &__street {
+    color: #FFFFFF;
     text-decoration: underline;
   }
-  &__end{
+  &__end {
     font-size: 10px;
     font-weight: 400;
     line-height: 13.5px;
   }
-  &__cobfidence{
+  &__cobfidence {
     margin-bottom: 7px;
   }
-  &__copyright{
+  &__copyright {
     margin-bottom: 7px;
   }
-  &__map{
+  &__map {
     margin-bottom: 43.73px;
   }
-  &__up{
+  &__up {
     text-align: center;
+    color: #FFFFFF;
+    text-decoration: none;
     font-size: 12px;
     font-weight: 600;
     line-height: 16.2px;
@@ -995,5 +1032,22 @@ body {
       display: none;
     }
   }
+  &__up-icon {
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+  }
+  &__org {
+    width: 60px;
+    height: 25px;
+    @media (min-width: 980px) {
+      width: 110px;
+      height: 45px;
+    }
+  }
 }
 
+.icon-box {
+  width: 100%;
+  height: 100%;
+}
